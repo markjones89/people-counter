@@ -29,7 +29,7 @@ int zone = 0;
 uint16_t mqttDistance1, mqttDistance2;
 
 // Define the path of the binary file for flash update
-String UPDATE_BINARY_FILE_PATH = "http://update.switchfi.co.za/firmware/counteresp32.bin"; //"http://evlog.zapto.org/subs/figures/test.bin";
+String UPDATE_BINARY_FILE_PATH = "http:/192.168.1.10/firmware/counteresp32.bin"; 
 
 // Array to hold measurements for the standard deviation calculation
 const int measArrSize = 500;
@@ -46,18 +46,13 @@ WiFiManager wifiManager;
 //------
 String MAC_ADDRESS;
 
-//const char* MQTT_USERNAME = "pi";
-//const char* MQTT_PASSWORD = "rjaxtarmas1"; 
-
-//const char* MQTT_CLIENT = "testClien";  // *** Must be unique
-//const char* MQTT_ADDRESS = "esp-32.zapto.org";
 
 // Mark config
-const char* MQTT_USERNAME = "switchfi";
-const char* MQTT_PASSWORD = "M@rkmj1989"; 
+const char* MQTT_USERNAME = "username";
+const char* MQTT_PASSWORD = "passowrk"; 
 
 const char* MQTT_CLIENT = "testClien";  // *** Must be unique
-const char* MQTT_ADDRESS = "mqtt.switchfi.co.za";
+const char* MQTT_ADDRESS = "192.168.1.1";
 
 const char* MQTT_DEBUG_TOPIC = "debug";
 char mqttDebugTopic[150];
@@ -147,11 +142,9 @@ WiFiClient wifiClient;
 PubSubClient client(MQTT_ADDRESS, 1883, mqttCallback, wifiClient);
 
 const char* WIFI_SSID    = "Phil UB";//"Manyeleti";//"ubx";
-const char* WIFI_PASSWORD = "12312C64400151";//"16148279";//"GqpZvmK8@r5yL#AP";
+const char* WIFI_PASSWORD = "12312C64400151";/
 
-// Mark config
-//const char* WIFI_SSID    = "Intuitive";
-//const char* WIFI_PASSWORD = "SensorS123";
+
 
 int WIFI_MANAGER_ENABLE = 0;
 //------
@@ -183,7 +176,7 @@ uint32_t MAX_DISTANCE = 33;
 
 uint32_t MIN_DISTANCE = 0;
 
-String MQTT_WIFI_SSID = "Intuitive";
+String MQTT_WIFI_SSID = "test";
 String MQTT_WIFI_PASSWORD = "SensorS123";
 
 // Define distance metering mode of the sensor (short or long, default is long)
