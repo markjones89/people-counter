@@ -126,7 +126,7 @@ void mqttForceInitConfig() {
   intToEeprom(MAX_DISTANCE, 91);
   MIN_DISTANCE = 33;
   intToEeprom(MIN_DISTANCE, 97);
-  MQTT_WIFI_SSID = "Intuitive";
+  MQTT_WIFI_SSID = "test";
   strToEeprom(MQTT_WIFI_SSID, 155, MQTT_WIFI_SSID.length());
   MQTT_WIFI_PASSWORD = "SensorS123";
   strToEeprom(MQTT_WIFI_PASSWORD, 177, MQTT_WIFI_PASSWORD.length());
